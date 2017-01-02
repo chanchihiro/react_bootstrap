@@ -1,0 +1,93 @@
+@font-face {
+  font-family: mc-l;
+  src: url(../font/mplus-1m-light.ttf) format("opentype"); }
+
+@font-face {
+  font-family: mc-b;
+  src: url(../font/mplus-1m-bold.ttf) format("opentype"); }
+
+@font-face {
+  font-family: mc-r;
+  src: url(../font/mplus-1m-regular.ttf) format("opentype"); }
+
+@font-face {
+  font-family: mc-t;
+  src: url(../font/mplus-1m-thin) format("opentype"); }
+
+@font-face {
+  font-family: mc-m;
+  src: url(../font/mplus-1m-medium.ttf) format("opentype"); }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-weight: normal; }
+
+.p-v-01 {
+  padding: 1rem 0rem; }
+
+.p-v-02 {
+  padding: 2rem 0rem; }
+
+.p-v-03 {
+  padding: 3rem 0rem; }
+
+.p-v-04 {
+  padding: 4rem 0rem; }
+
+.p-v-05 {
+  padding: 5rem 0rem; }
+
+.p-v-06 {
+  padding: 6rem 0rem; }
+
+.p-v-07 {
+  padding: 7rem 0rem; }
+
+.p-v-08 {
+  padding: 8rem 0rem; }
+
+body {
+  background-color: #fff;
+  font-family: mc-l; }
+
+.bd, th, td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  padding: 3px 10px; }
+
+#content {
+  width: 300px;
+  margin: 0 auto; }
+
+.fadingText-enter {
+  opacity: 0;
+  -webkit-transform: translate(1000px, 0px) scale(5, 5);
+          transform: translate(1000px, 0px) scale(5, 5); }
+
+.fadingText-enter.fadingText-enter-active {
+  opacity: 1;
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+          transform: translate(0px, 0px) scale(1, 1);
+  -webkit-transition: 1000ms;
+  transition: 1000ms; }
+
+.fadingText-leave {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1); }
+
+.fadingText-leave.fadingText-leave-active {
+  opacity: 0;
+  -webkit-transform: scale(0.1, 0.1);
+          transform: scale(0.1, 0.1);
+  -webkit-transition: 800ms;
+  transition: 800ms; }
+
+.fadingText-appear {
+  opacity: 0; }
+
+.fadingText-appear.fadingText-appar-active {
+  opacity: 1;
+  -webkit-transition: 800ms;
+  transition: 800ms; }
