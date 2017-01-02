@@ -40405,6 +40405,26 @@ var _Button = require('react-bootstrap/lib/Button');
 
 var _Button2 = _interopRequireDefault(_Button);
 
+var _Navbar = require('react-bootstrap/lib/Navbar');
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _Nav = require('react-bootstrap/lib/Nav');
+
+var _Nav2 = _interopRequireDefault(_Nav);
+
+var _NavDropdown = require('react-bootstrap/lib/NavDropdown');
+
+var _NavDropdown2 = _interopRequireDefault(_NavDropdown);
+
+var _NavItem = require('react-bootstrap/lib/NavItem');
+
+var _NavItem2 = _interopRequireDefault(_NavItem);
+
+var _MenuItem = require('react-bootstrap/lib/MenuItem');
+
+var _MenuItem2 = _interopRequireDefault(_MenuItem);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40439,103 +40459,118 @@ var infos = [{
 	imgUrl: 'http://placehold.it/150x150'
 }];
 
-// Item Layout
+var Header = function (_React$Component) {
+	_inherits(Header, _React$Component);
 
-var EffectsLayout = function (_React$Component) {
-	_inherits(EffectsLayout, _React$Component);
+	function Header() {
+		_classCallCheck(this, Header);
 
-	function EffectsLayout(props) {
-		_classCallCheck(this, EffectsLayout);
-
-		var _this = _possibleConstructorReturn(this, (EffectsLayout.__proto__ || Object.getPrototypeOf(EffectsLayout)).call(this, props));
-
-		_this.state = {
-			infos: infos //ここに書くサンプルの情報を入れる
-		};
-		return _this;
+		return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
 	}
 
-	//[View Demo] ボタンのクリックイベント
-
-
-	_createClass(EffectsLayout, [{
-		key: 'showDemo',
-		value: function showDemo(e) {
-			location.href = e.target.title;
-		}
-
-		//[View Code] ボタンのクリックイベント
-
-	}, {
-		key: 'showCode',
-		value: function showCode(e) {
-			location.href = e.target.title;
-		}
-	}, {
+	_createClass(Header, [{
 		key: 'render',
 		value: function render() {
-			var showDemo = this.showDemo;
-			var showCode = this.showCode;
-			var items = this.state.infos.map(function (info) {
-				return _react2.default.createElement(
-					_Col2.default,
-					{ xs: 12, md: 4, key: infos.filename },
-					_react2.default.createElement(
-						'div',
-						{ className: 'item' },
-						_react2.default.createElement(
-							'div',
-							{ className: 'title-header' },
-							_react2.default.createElement(
-								'h3',
-								null,
-								info.title
-							),
-							_react2.default.createElement(
-								'p',
-								null,
-								info.filename
-							)
-						),
-						_react2.default.createElement(
-							'div',
-							{ className: 'avatar' },
-							_react2.default.createElement('img', { src: info.imgUrl })
-						),
-						_react2.default.createElement(
-							'p',
-							null,
-							_react2.default.createElement(
-								_Button2.default,
-								{ className: 'btn btn-demo', onClick: showDemo },
-								'View Demo'
-							),
-							_react2.default.createElement(
-								_Button2.default,
-								{ className: 'btn-github', onClick: showCode },
-								'View Code'
-							)
-						)
-					)
-				);
-			});
-
-			//itemを配置
 			return _react2.default.createElement(
-				_Grid2.default,
+				_Navbar2.default,
 				null,
 				_react2.default.createElement(
-					_Row2.default,
+					_Navbar2.default.Header,
 					null,
-					items
+					_react2.default.createElement(
+						_Navbar2.default.Brand,
+						null,
+						_react2.default.createElement(
+							'a',
+							{ href: '#' },
+							'sample'
+						)
+					)
+				),
+				_react2.default.createElement(
+					_Nav2.default,
+					{ pullRight: true },
+					_react2.default.createElement(
+						_NavDropdown2.default,
+						{ eventkey: 1, title: 'Settings' },
+						_react2.default.createElement(
+							_MenuItem2.default,
+							{ eventkey: 1.1 },
+							'profile'
+						),
+						_react2.default.createElement(
+							_MenuItem2.default,
+							{ eventkey: 1.1 },
+							'sign out'
+						)
+					)
 				)
 			);
 		}
 	}]);
 
-	return EffectsLayout;
+	return Header;
 }(_react2.default.Component);
 
-_reactDom2.default.render(_react2.default.createElement(EffectsLayout, null), document.getElementById("containerDOM"));
+// Item Layout
+// class EffectsLayout extends React.Component{
+// 	constructor(props) {
+// 		super(props);
+// 		this.state = {
+// 			infos: infos //ここに書くサンプルの情報を入れる
+// 		};
+// 	}
 
-},{"react":438,"react-addons-css-transition-group":159,"react-bootstrap":246,"react-bootstrap/lib/Button":165,"react-bootstrap/lib/Col":173,"react-bootstrap/lib/Grid":187,"react-bootstrap/lib/Row":233,"react-dom":257}]},{},[443]);
+// 	//[View Demo] ボタンのクリックイベント
+// 	showDemo(e){
+// 		location.href = e.target.title;
+// 	}
+
+// 	//[View Code] ボタンのクリックイベント
+// 	showCode(e){
+// 		location.href = e.target.title;
+// 	}
+
+// 	render(){
+// 		let showDemo = this.showDemo;
+// 		let showCode = this.showCode;
+// 		let NavbarInstance = (
+// 			<Navbar inverse toggleNavKey={0} fixedTop={true}>
+// 			</Navbar>
+// 		);
+
+// 		let items = this.state.infos.map((info) => {
+// 			return(
+// 				<Col xs={12} md={4} key={infos.filename}>
+// 					<div className={'item'}>
+// 						<div className={'title-header'}>
+// 							<h3>{info.title}</h3>
+// 							<p>{info.filename}</p>
+// 						</div>
+// 						<div className={'avatar'}>
+// 							<img src={info.imgUrl} />
+// 						</div>
+// 						<p>
+// 							<Button className={'btn btn-demo'} onClick={showDemo}>View Demo</Button>
+// 							<Button className={'btn-github'} onClick={showCode}>View Code</Button>
+// 						</p>
+// 					</div>
+// 				</Col>
+// 			);
+// 		});
+
+// 		//itemを配置
+// 		return(
+// 			<Grid>
+// 				<Row>
+// 					{items}
+// 				</Row>
+// 			</Grid>
+// 		);
+// 	}
+// }
+
+
+_reactDom2.default.render(_react2.default.createElement(Header, null), document.getElementById("containerDOM"));
+
+},{"react":438,"react-addons-css-transition-group":159,"react-bootstrap":246,"react-bootstrap/lib/Button":165,"react-bootstrap/lib/Col":173,"react-bootstrap/lib/Grid":187,"react-bootstrap/lib/MenuItem":204,"react-bootstrap/lib/Nav":211,"react-bootstrap/lib/NavDropdown":212,"react-bootstrap/lib/NavItem":213,"react-bootstrap/lib/Navbar":214,"react-bootstrap/lib/Row":233,"react-dom":257}]},{},[443]);
