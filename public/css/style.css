@@ -51,43 +51,57 @@ body {
   background-color: #fff;
   font-family: mc-l; }
 
-.bd, th, td {
-  border: 1px solid #000;
-  border-collapse: collapse;
-  padding: 3px 10px; }
+#title {
+  text-align: center;
+  margin: 50px;
+  font-weight: 100; }
 
-#content {
-  width: 300px;
-  margin: 0 auto; }
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  color: #3d808b;
+  margin-bottom: 6px; }
 
-.fadingText-enter {
-  opacity: 0;
-  -webkit-transform: translate(1000px, 0px) scale(5, 5);
-          transform: translate(1000px, 0px) scale(5, 5); }
+p {
+  font-size: 10px;
+  color: #3d808b; }
 
-.fadingText-enter.fadingText-enter-active {
-  opacity: 1;
-  -webkit-transform: translate(0px, 0px) scale(1, 1);
-          transform: translate(0px, 0px) scale(1, 1);
-  -webkit-transition: 1000ms;
-  transition: 1000ms; }
+div.item {
+  margin-bottom: 25px;
+  padding: 34px 25px 22px;
+  text-align: center;
+  background: #fff; }
 
-.fadingText-leave {
-  opacity: 1;
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1); }
+div.title-header {
+  height: 80px; }
 
-.fadingText-leave.fadingText-leave-active {
-  opacity: 0;
-  -webkit-transform: scale(0.1, 0.1);
-          transform: scale(0.1, 0.1);
-  -webkit-transition: 800ms;
-  transition: 800ms; }
+div.avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 22px;
+  border: 2px solid #3d808b;
+  padding: 3px;
+  border-radius: 50%; }
 
-.fadingText-appear {
-  opacity: 0; }
+.avatar img {
+  display: block;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%; }
 
-.fadingText-appear.fadingText-appar-active {
-  opacity: 1;
-  -webkit-transition: 800ms;
-  transition: 800ms; }
+.btn {
+  border: 0;
+  border-radius: 0;
+  font-weight: 700;
+  margin: 5px; }
+
+.btn-demo {
+  border: 0;
+  color: #fff;
+  background-color: #3d808b; }
+
+.btn-demo:hover {
+  border: 0;
+  color: #fff;
+  background-color: #5dabb8; }

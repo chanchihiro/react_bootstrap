@@ -50,6 +50,7 @@
     "react-addons": "^0.9.1-deprecated",
     "react-addons-css-transition-group": "^15.4.1",
     "react-addons-perf": "^15.4.1",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.1",
     "scss-lint": "0.0.0",
     "t": "^0.5.1",
