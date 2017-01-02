@@ -49,6 +49,7 @@ let infos = [
 ];
 
 
+//Header
 class Header extends React.Component {
 	render(){
 		return(
@@ -73,65 +74,75 @@ class Header extends React.Component {
 
 
 // Item Layout
-// class EffectsLayout extends React.Component{
-// 	constructor(props) {
-// 		super(props);
-// 		this.state = {
-// 			infos: infos //ここに書くサンプルの情報を入れる
-// 		};
-// 	}
+class EffectsLayout extends React.Component{
+	constructor(props) {
+		super(props);
+		this.state = {
+			infos: infos //ここに書くサンプルの情報を入れる
+		};
+	}
 
-// 	//[View Demo] ボタンのクリックイベント
-// 	showDemo(e){
-// 		location.href = e.target.title;
-// 	}
+	//[View Demo] ボタンのクリックイベント
+	showDemo(e){
+		location.href = e.target.title;
+	}
 
-// 	//[View Code] ボタンのクリックイベント
-// 	showCode(e){
-// 		location.href = e.target.title;
-// 	}
+	//[View Code] ボタンのクリックイベント
+	showCode(e){
+		location.href = e.target.title;
+	}
 
-// 	render(){
-// 		let showDemo = this.showDemo;
-// 		let showCode = this.showCode;
-// 		let NavbarInstance = (
-// 			<Navbar inverse toggleNavKey={0} fixedTop={true}>
-// 			</Navbar>
-// 		);
+	render(){
+		let showDemo = this.showDemo;
+		let showCode = this.showCode;
+		let NavbarInstance = (
+			<Navbar inverse toggleNavKey={0} fixedTop={true}>
+			</Navbar>
+		);
 
-// 		let items = this.state.infos.map((info) => {
-// 			return(
-// 				<Col xs={12} md={4} key={infos.filename}>
-// 					<div className={'item'}>
-// 						<div className={'title-header'}>
-// 							<h3>{info.title}</h3>
-// 							<p>{info.filename}</p>
-// 						</div>
-// 						<div className={'avatar'}>
-// 							<img src={info.imgUrl} />
-// 						</div>
-// 						<p>
-// 							<Button className={'btn btn-demo'} onClick={showDemo}>View Demo</Button>
-// 							<Button className={'btn-github'} onClick={showCode}>View Code</Button>
-// 						</p>
-// 					</div>
-// 				</Col>
-// 			);
-// 		});
+		let items = this.state.infos.map((info) => {
+			return(
+				<Col xs={12} md={4} key={infos.filename}>
+					<div className={'item'}>
+						<div className={'title-header'}>
+							<h3>{info.title}</h3>
+							<p>{info.filename}</p>
+						</div>
+						<div className={'avatar'}>
+							<img src={info.imgUrl} />
+						</div>
+						<p>
+							<Button className={'btn btn-demo'} onClick={showDemo}>View Demo</Button>
+							<Button className={'btn-github'} onClick={showCode}>View Code</Button>
+						</p>
+					</div>
+				</Col>
+			);
+		});
+		return(
+			<Grid>
+       			<Row>
+        			{items}
+        		</Row>
+    		</Grid>
+		);
+	}
+}
 
-// 		//itemを配置
-// 		return(
-// 			<Grid>
-// 				<Row>
-// 					{items}
-// 				</Row>
-// 			</Grid>
-// 		);
-// 	}
-// }
+class All extends React.Component{
+	render(){
+		return(
+			<div>
+				<Header />
+				<EffectsLayout />
+			</div>
+		);
+	}
+}
+
 
 
 ReactDOM.render(
-	<Header />,
+	<All />,
 	document.getElementById("containerDOM")
 );

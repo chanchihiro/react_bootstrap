@@ -48,7 +48,10 @@
   padding: 8rem 0rem; }
 
 body {
-  background-color: #fff;
+  background-image: -webkit-radial-gradient(#444 20%, transparent 0), -webkit-radial-gradient(#444 20%, transparent 0);
+  background-image: radial-gradient(#444 20%, transparent 0), radial-gradient(#444 20%, transparent 0);
+  background-position: 0 0, 10px 10px;
+  background-size: 10px 10px;
   font-family: mc-l; }
 
 #title {
@@ -105,3 +108,7 @@ div.avatar {
   border: 0;
   color: #fff;
   background-color: #5dabb8; }
+
+.navbar-default {
+  background-color: #fff;
+  border: none; }
